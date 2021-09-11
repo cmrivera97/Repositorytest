@@ -1,0 +1,212 @@
+/* declarar contantes de diseño para las fuentes, colores y recursos */
+:root {
+    --textos: 'Lato', sans-serif;
+    --titulos: 'Quicksand', sans-serif;
+    --colorFondo: #fff;
+    --colorHeader: rgb(59, 7, 7);
+    --colorFooter: #000;
+}
+/* estilos para el cuerpo 
+se utiliza el selector de etiqueta*/
+
+/* configuraciones globales */
+/* para que no se desborden las imegenes, los asteriscos es para aplicaciones a nivel global */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--textos);
+    /* background-color: var(--colorFooter) ; */
+    font-size: 1.2rem;
+    text-align:justify;
+}
+
+h1,h2,h3,h4{
+    font-family: var(--titulos);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--colorFooter);
+}
+
+h2{
+    font-weight: bold !important;
+    font-size: 2.5rem !important;
+}
+
+h3{
+    font-weight: bold !important;
+    font-size: 2rem !important;
+}
+/* Encabezado o header */
+/* la clase se representa por el punto (.) y el nombre de la clase */
+
+.home-wrapper{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/background.jpg) no-repeat center top;
+    background-size: cover;  
+    color: var(--colorFondo);
+}
+
+header{
+    position: fixed; /*fija el elemento*/
+    width: 100%;
+    background-color: rgb(48,48,48,0.8);
+    padding: 10px 0;
+}
+
+header img{
+    width: 200px;
+}
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header nav a{
+    color: var(--colorFondo);
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 15px 20px ;
+    border-radius: 3px;
+}
+
+header nav a.active{
+   background: rgb(233, 207, 124);
+}
+
+/* home */
+/* los identificadores (id) se representan por el # y el nombre del identificador */
+
+#home{
+    text-align: center;
+    padding: 200px 0 150px;
+}
+#home h1{
+    color: var(--colorFondo) !important;
+    font-size: 40px !important;
+    margin-bottom: 40px;
+    line-height: 3.2;
+
+}
+#home p{
+    font-size: 14px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+#home .divider{
+    width: 90px;
+    border-top: 5px solid rgb(233, 207, 124);
+    margin:0 auto;
+}
+
+#home .social{
+    margin-top: 90px;
+}
+#home .social a{
+    color: var(--colorFondo);
+    display: inline-block;
+    border-radius: 50%;
+    background-color: black;
+    font-size: 25px;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    margin-right: 18px;
+    line-height: 50px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+/* para aplicar transición */
+#home .social a:hover{
+background-color: blueviolet;
+}
+
+/* secciones */
+
+section{
+    padding: 80px 0;
+
+}
+section h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+p{
+    text-align: justify;
+}
+
+/* servicios */
+#servicios .box{
+    display: inline-block;
+    width: 33%;
+    /* el ancho total es 100%, se desea dividir en tres columnas, se divide 100 entre 3, el resultado:33% */
+    padding: 8px;
+}
+
+#servicios .box img{
+    padding-left: 30%;
+    padding-bottom: 22px;  
+}
+
+/* portafolio */
+
+#portafolio .box{
+    display: inline-block;
+    text-align: justify;
+    width: 31%;
+    margin: 1%;
+    padding: 4px;
+    background-color: var(--colorFondo);
+}
+
+
+#portafolio .box img{
+    width: 100%;
+}
+
+
+#contacto{
+    background-image: url(../images/map-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: rgba(160, 139, 139, 0.637);
+}
+
+#contacto h2{
+    color: rgb(80, 72, 3)
+}
+#contacto input, textarea,select{
+    width: 400px;
+    background-color: rgb(233, 207, 124);
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 20px 40px;
+    font-weight: bold;
+    line-height: 1;
+    color: black;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: var(--colorFooter);
+    text-align: center;
+    color: var(--colorFondo);
+    font-size: 16px;
+    padding: 25px 0;
+}
